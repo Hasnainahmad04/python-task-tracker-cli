@@ -18,7 +18,7 @@
 To start the TaskTracker CLI, run the following command:
 
 ```bash
-python task_tracker.py
+python app.py
 ```
 
 ### Add a new Task
