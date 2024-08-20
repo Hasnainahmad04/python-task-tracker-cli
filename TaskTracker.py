@@ -35,13 +35,6 @@ class TaskTracker:
         formatted_time = current_time.strftime("%m/%d/%Y %H:%M:%S")
         new_task = { "id": new_id, "description": description, "created_at": formatted_time, "updated_at": formatted_time, "status": 'todo'}
         self.Tasks.append(new_task)
-        self.save_all_tasks()
-        return new_task
-
-    def get_tasks_by_status(self, status: str):
-        """Returns Task list by status."""
-        filtered_tasks = filter(lambda task: task['status'] == status, self.Tasks)
-        return list(filtered_tasks)
 
     def update_task_by_id(self, task_id, description):
         """Updated a task description based on id."""
